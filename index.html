@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Abdul Sheikh | Robotics Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        header p {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            color: #94a3b8;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        nav {
+            margin-top: 30px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #38bdf8;
+            font-weight: 600;
+        }
+
+        section {
+            padding: 80px 10%;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            border-left: 4px solid #38bdf8;
+            padding-left: 15px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .project-card {
+            background-color: #1e293b;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .project-content p {
+            font-size: 0.95rem;
+            color: #94a3b8;
+        }
+
+        .tags {
+            margin-top: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #0ea5e9;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            margin-right: 8px;
+            margin-top: 6px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #0f172a;
+            color: #64748b;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Abdul Sheikh</h1>
+    <p>
+        Robotics Developer | Mechatronics & Embedded Systems Enthusiast  
+        Designing and building advanced robotic systems including quadrupeds, prosthetic mechanisms, autonomous vehicles, and high-performance motor control systems.
+    </p>
+
+    <nav>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="projects">
+    <h2>Featured Projects</h2>
+
+    <div class="project-grid">
+
+        <!-- Quadruped Robot -->
+        <div class="project-card">
+            <img src="images/quadruped_main.jpg" alt="Quadruped Robot">
+            <div class="project-content">
+                <h3>Quadrupedal Robot (16 DOF)</h3>
+                <p>
+                    Designed and built a fully functional quadruped robot using 16 metal gear servos, 
+                    ESP32 control architecture, and dual battery power systems. 
+                    Features real-time gait programming and wireless controller integration.
+                </p>
+                <div class="tags">
+                    <span class="tag">ESP32</span>
+                    <span class="tag">Servo Control</span>
+                    <span class="tag">Gait Algorithms</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hexapod -->
+        <div class="project-card">
+            <img src="images/hexapod.jpg" alt="Hexapod Robot">
+            <div class="project-content">
+                <h3>Hexapod Robot</h3>
+                <p>
+                    Built an 18-servo hexapod platform powered by Arduino Mega. 
+                    Focused on mechanical optimization, wiring reduction, and 
+                    synchronized leg motion control.
+                </p>
+                <div class="tags">
+                    <span class="tag">Arduino Mega</span>
+                    <span class="tag">18 DOF</span>
+                    <span class="tag">3D Printed</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Prosthetic Leg -->
+        <div class="project-card">
+            <img src="images/prosthetic_leg.jpg" alt="Prosthetic Leg">
+            <div class="project-content">
+                <h3>4-DOF Prosthetic Leg Prototype</h3>
+                <p>
+                    Developed a 4-DC motor prosthetic leg system with independent 
+                    hip and knee actuation. Inspired by assistive robotics and 
+                    motion rehabilitation systems.
+                </p>
+                <div class="tags">
+                    <span class="tag">DC Motors</span>
+                    <span class="tag">Mechanical Design</span>
+                    <span class="tag">Calibration Systems</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PS2 Controlled Car -->
+        <div class="project-card">
+            <img src="images/ps2_car.jpg" alt="PS2 Controlled Robot Car">
+            <div class="project-content">
+                <h3>PS2 Controlled & Autonomous Car</h3>
+                <p>
+                    Built multiple generations of remote and autonomous vehicles. 
+                    Implemented sensor-based obstacle detection and multi-motor 
+                    drive systems with differential control.
+                </p>
+                <div class="tags">
+                    <span class="tag">Arduino</span>
+                    <span class="tag">Sensor Fusion</span>
+                    <span class="tag">Motor Drivers</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CAD Projects -->
+        <div class="project-card">
+            <img src="images/cad_design.jpg" alt="CAD Projects">
+            <div class="project-content">
+                <h3>Advanced CAD & Mechanical Design</h3>
+                <p>
+                    Designed complete robotic assemblies including leg segments 
+                    with NEMA 17 steppers, optimized gear ratios (2:1 → 9:1), 
+                    and full quadruped system integration using SolidWorks.
+                </p>
+                <div class="tags">
+                    <span class="tag">SolidWorks</span>
+                    <span class="tag">Gear Design</span>
+                    <span class="tag">Kinematics</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>
+        Email: your.email@example.com  
+        <br>
+        GitHub: github.com/yourusername  
+        <br>
+        LinkedIn: linkedin.com/in/yourprofile
+    </p>
+</section>
+
+<footer>
+    © 2026 Abdul Sheikh | Robotics Portfolio
+</footer>
+
+</body>
+</html>
